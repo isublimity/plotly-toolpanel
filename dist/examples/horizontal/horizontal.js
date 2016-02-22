@@ -22,7 +22,8 @@ $.getJSON(figureURL, function (figure) {
         standalone: true,
         popoverContainer: containerDiv,
         menuStyle: 'minimal',
-        orientation: 'horizontal'
+        orientation: 'horizontal',
+        slideoutDirection: 'bottom'
     });
 
     /* Initialize the ToolPanel's menu */
