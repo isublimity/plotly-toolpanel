@@ -1,5 +1,7 @@
 ## Plotly ToolPanel
 
+The chart editing toolpanel used in the first version of Plotly's online chart maker ("Plotly 1.0"). Fork this to create your own chart editor with [Plotly.js](https://plot.ly/javascript/).
+
 - [Getting Started](#getting-started)
 - [API Documentation](#api-documentation)
 - [Custom CSS](#custom-css)
