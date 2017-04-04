@@ -1,6 +1,6 @@
 ## ⚒ Plotly ToolPanel
 
-A jQuery bundle for quickly creating customizable [Plotly.js](https://github.com/plotly/plotly.js) editors. 
+A JavaScript package to quickly create your own customizable [Plotly.js](https://github.com/plotly/plotly.js) editors. 
 
 DEMO: See the toolpanel live in Plotly's [v1 online chart maker](https://plot.ly/plotly-1) (you'll need to create a free account). 
 
