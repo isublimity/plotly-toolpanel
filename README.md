@@ -1,8 +1,10 @@
 ## 🔨 Plotly ToolPanel
 
-The chart editing toolpanel used in the first version of Plotly's online chart maker ("Plotly 1.0"). Clone this to create your own chart editor for [Plotly.js](https://github.com/plotly/plotly.js) charts. 
+A jQuery bundle for quickly creating customizable [Plotly.js](https://github.com/plotly/plotly.js) editors. 
 
-Want a little help adding data visualization to your own products? [Contact us](https://plot.ly/products/consulting-and-oem/).
+DEMO: See the toolpanel live in Plotly's [v1 online chart maker](https://plot.ly/plotly-1) (you'll need to create a free account). 
+
+Want help adding data visualization to your own products? [Contact us](https://plot.ly/products/consulting-and-oem/).
 
 - [Getting Started](#getting-started)
 - [API Documentation](#api-documentation)
