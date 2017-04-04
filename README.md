@@ -120,13 +120,14 @@ toolPanel.createMenuButton({
 ```
 
 ##### `descriptive` menu style
-![](examples/img/regularbutton-classic.png)
+![](dist/examples/img/regularbutton-classic.png)
 
 ##### `minimal` menu style (multiple buttons)
-![](examples/img/regularbuttons-narrow.png)
+
+![](dist/examples/img/regularbuttons-narrow.png)
 
 ##### `minimal` menu style, `horizontal` orientation (multiple buttons)
-![](examples/img/regularbuttons-horizontal.png)
+![](dist/examples/img/regularbuttons-horizontal.png)
 
 ### toolPanel.createMenuButtons(specs)
 A helper method for `createMenuButton`. Pass in an `Array` of `{buttonSpecs}` and it will create and append them all to the ToolMenu.
@@ -148,10 +149,10 @@ toolPanel.createMenuButtons(buttonSpecs);
 ```
 
 ##### `descriptive menu style`
-![](examples/img/defaultbuttons-classic.png)
+![](dist/examples/img/defaultbuttons-classic.png)
 
 #### `minimal menu style`
-![](examples/img/regularbuttons-narrow.png)
+![](dist/examples/img/regularbuttons-narrow.png)
 
 ### toolPanel.createMenuMultiButton(spec, index)
 Create a MultiButton and append it to the ToolMenu
@@ -194,18 +195,18 @@ toolPanel.createMenuMultiButton([
 ##### `descriptive` menu style
 This will create a button group that automatically sizes itself to the number of inner buttons.
 
-![](examples/img/multibutton-classic.png)
-![](examples/img/multibutton-classic-2.png)
+![](dist/examples/img/multibutton-classic.png)
+![](dist/examples/img/multibutton-classic-2.png)
 
 ##### `minimal` menu styles
 Button group will still be created, however each button will be made into its own element. You can toggle back and forth between `descriptive` and `minimal` views and the toolPanel will automatically handle the style and line-breaks.
 
-![](examples/img/multibutton-narrow.png)
+![](dist/examples/img/multibutton-narrow.png)
 
 ### toolPanel.createMenuSpacer()
 Creates an inserts a spacer the size of one `menuButton`. Spacer is then added to the `toolMenu.toolMenuItems` array.
 
-![](examples/img/spacer-classic.png)
+![](dist/examples/img/spacer-classic.png)
 
 ### toolPanel.style(menuStyle)
 A method that sets the menu layout style and re-renders the menu with that style. Returns `toolPanel` so you can chain styling and orientation calls together.
@@ -233,13 +234,13 @@ A method that sets the direction that the `slideoutContainer` opens up to. Retur
     - `bottom`
 
 #### Style `descriptive`, Orientation `vertical`
-![](examples/img/classic.png "descriptive")
+![](dist/examples/img/classic.png "descriptive")
 
 #### Style `minimal`, Orientation `vertical`
-![](examples/img/narrow.png "descriptive")
+![](dist/examples/img/narrow.png "descriptive")
 
 #### Style `minimal`, Orientation `horizontal`
-![](examples/img/horizontal.png "descriptive")
+![](dist/examples/img/horizontal.png "descriptive")
 
 ### toolPanel.getMenuItem(index)
 Returns the `menuItem` at `index`. `menuItem` is the DOM element of the menuItem, with an attached `remove` method, which removes it from the DOM, as well as from the `toolPanel.toolMenuItems` array.
@@ -276,4 +277,4 @@ Should you wish to override the styles of the buttons, these are the relevant CS
     - `.--horizontal` - Modifier for when the toolmenu orientation is `horizontal`.
 
 ## Examples
-See [examples](examples/)
+See [examples](dist/examples/)
