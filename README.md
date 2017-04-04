@@ -4,7 +4,7 @@
 - [API Documentation](#api-documentation)
 - [Custom CSS](#custom-css)
 
-![splash](examples/img/readme-main.png)
+![splash](dist/examples/img/readme-main.png)
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ You'll want to create an HTML file and import all of the following dependencies:
 <link rel="stylesheet" type="text/css" href="build/style.css"/>
 ```
 
-Once you've done that, `Plotly` and `ToolPanel` will be available for use in the global scope. Now you're ready to initialize a ToolPanel! You can see a simple example [here](examples/simple/simple.js), or explore the API documentation below to see all of the available options and methods you can use.
+Once you've done that, `Plotly` and `ToolPanel` will be available for use in the global scope. Now you're ready to initialize a ToolPanel! You can see a simple example [here](dist/examples/simple/simple.js), or explore the API documentation below to see all of the available options and methods you can use.
 
 ## API Documentation
 ### var toolPanel = new ToolPanel(Plotly, graphDiv, opts)
