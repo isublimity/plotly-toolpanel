@@ -1,4 +1,4 @@
-## 🔨 Plotly ToolPanel
+## ⚒ Plotly ToolPanel
 
 A jQuery bundle for quickly creating customizable [Plotly.js](https://github.com/plotly/plotly.js) editors. 
 
