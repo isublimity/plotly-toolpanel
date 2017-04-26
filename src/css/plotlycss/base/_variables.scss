@@ -1,0 +1,247 @@
+/**
+ * Env variables
+ * TODO: This will be generated in another file
+ */
+$env_fonts_use_local: true !default;
+
+/**
+ * Static directories
+ */
+$static-dir: "/static" !default;
+$fonts-dir: "#{$static-dir}/plotlycss/fonts" !default;
+
+
+/**
+ * Resolutions
+ */
+$res-tiny-min: 0px;
+$res-tiny-max: 499px;
+
+$res-small-min: 500px;
+$res-small-max: 1279px;
+
+$res-medium-min: 1280px;
+$res-medium-max: 1679px;
+
+$res-large-min: 1680px;
+$res-large-max: 1999px;
+
+$res-huge-min: 2000px;
+
+$res-phone: 400px;
+$res-phablet: 550px;
+$res-tablet: 750px;
+$res-laptop: 1000px;
+$res-desktop: 1200px;
+
+/**
+ * Colors
+ */
+
+$color-white: white;
+$color-transparent: transparent;
+$color-upgrade: #ab63fa;
+$color-upgrade-hover: #6A3E9C;
+
+$color-background-main: #f3f3f3;
+$color-background-modal: #f5f9ff;
+
+$color-brand:                		#447bdc;
+$color-brand-hover:          		#2d56aa;
+$color-brand-hover-translucent:	        rgba(66, 112, 226, 0.6);
+$color-brand-light:          		#9AD1FD;
+$color-brand-accent:         		#274478;
+$color-brand-dark:           		#152f5e;
+$color-brand-accent-enterprise:		#265cc3;
+$color-brand-accent-enterprise-secondary: 	#2455b2;
+
+$color-bg-base:                  $color-background-main;
+$color-bg-base-new:              #F4F4F8;
+$color-bg-base-lighter:          #f8f8f9;
+$color-bg-light:                 $color-white;
+$color-bg-alt:                   #F4FAFF; // kinda light-blue
+$color-bg-darker:                #e0e2e5;
+$color-brand-tint:               #a9b3c7;
+$color-bg-hint:                  #edf1f8;
+$color-bg-pay-attention:         #fee186;
+$color-bg-info:                  #e0f1ff;
+
+$color-click:                    #69738a;
+$color-danger:                   #d9534f;
+$color-danger-border:            #d43f3a;
+$color-lines:                    #ccc;
+$color-inline-code:              #db44a5;
+$color-muted-text-light:         #999;
+$color-muted-text:               #777;
+$color-muted-text-dark:          #444;
+
+$color-error-text:               #D32F2F;
+$color-warning-text:             #8A6D3B;
+$color-error-alt:                #EC6161;
+$color-error-bg:                 #FFE4E4;
+
+$color-link:                     $color-brand;
+$color-link-light:               #45A9FF;
+$color-link-dark:                #284576;
+$color-link-grey:                #8c97af;
+$color-link-hover:               $color-click;
+$color-link-hover-alt:           #ffc938;
+
+$color-link-secondary:           #E7E8E9;
+$color-link-secondary-hover:     $color-brand;
+
+$color-border:                       $color-link-secondary;
+
+$color-highlight:                    #dde1e7;
+$color-highlight-darker:             #bec8d9;
+
+$color-press:                        #1b325b;
+
+$color-gold:                         #F7BD0C;
+$color-light-cyan:                   #bbe9ff;
+$color-green:                        #52C108;
+$color-green-alt:                    #3ED4AD;
+$color-striking-cyan:                rgb(35,145,254);
+
+/* Toolmenu */
+$color-toolmenu-offwhite:            #fafafb;
+$color-toolmenu-border-light:        #a3a9b7;
+$color-toolmenu-border-dark:         $color-click;
+$color-toolmenu-lightgrey-bg:        #e4e4ea;
+$color-toolmenu-darkgrey-bg:         #c4c6cf;
+
+/** Industry Colors **/
+$color-light-cyan:		#bbe9ff;
+
+$color-industry-cyan:		#9ce9ff;
+$color-industry-dark-blue:	#1e3a7b;
+$color-industry-darker-cyan:	#8bd5f1;
+$color-industry-bright-blue: 	#2391fe;
+$color-industry-grey-blue:	#8d98af;
+$color-industry-black-blue:	#111d38;
+$dark-grey:			#4c5059;
+
+
+$cyanblue: 		        #58c8ea;
+$columbiablue: 		        #9bd1ff;
+$mayablue: 		        #6bb5fe;
+$cornflowerblue: 	        #3785d3;
+$lightcobaltblue: 	        #6d92d7;
+$darkgreyblue: 		        #687ba6;
+$mediumgreyblue: 	        #b3bac9;
+$lightgreyblue: 	        #9aa1b1;
+$mediumgrey: 			#C2C2C2;
+$lightgrey: 		        #dcdddd;
+$stronglightblue:            #119dff;
+
+$warning:                       #ffecb1;
+
+$color-notebook-bg:             #f8f8f8;
+$color-notebook-dark-gray:      #383838;
+$color-notebook-mid-gray:       #d8d8d8;
+$color-notebook-light-gray:     #828282;
+
+$color-fill-blue:               #6A9FD4;
+
+/** Border Width */
+$border-width: 1px;
+
+/** Border Radius */
+$border-radius: 4px;
+
+/** Workspace Colors **/
+$color-workspace-grey:            #4b4b4b;
+$color-workspace-light-grey:      #878787;
+$color-workspace-secondary-text:  #6D6D6D;
+$color-workspace-med-grey:        #d7d8df;
+
+/**
+ * $OVERRIDES
+ * Place any variables that should override defaults here.
+ */
+$no-size: 0px;
+$base-font-size: 13px !default;
+$base-line-height: 24px !default;
+
+$base-spacing-unit: $base-line-height !default;
+$double-spacing-unit: $base-spacing-unit * 2;
+$quadruple-spacing-unit: $base-spacing-unit * 4;
+
+$half-spacing-unit: $base-spacing-unit / 2;
+$quarter-spacing-unit: $base-spacing-unit / 4;
+
+$line-height-ratio: $base-line-height / $base-font-size;
+$small-font-size: 12px;
+
+$h1-size: 42px !default;
+$h2-size: 30px !default;
+$h3-size: 24px !default;
+$h4-size: 21px !default;
+$h5-size: 16px !default;
+$h6-size: 14px !default;
+
+/**
+ * rem-unit font sizes.
+ */
+$font-size-l-rem: 1.1rem;
+$font-size-m-rem: 1rem;
+$font-size-sm-rem: 0.9rem;
+$font-size-xs-rem: 0.8rem;
+
+$font-weight-lightest: 100;
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 800;
+
+$site-width: 1048px;
+
+/**
+ * font styles
+ */
+$uppercase-letter-spacing: 0.5px;
+
+/**
+ * .dropdown
+ */
+$dropdown-label-padding: 5px;
+$dropdown-line-height: 18px + $dropdown-label-padding + $dropdown-label-padding;
+
+
+/**
+ * .dropdownbtn
+ */
+$dropdownbtn-padding: 2px $half-spacing-unit;
+$dropdownbtn-line-height: 18px + $dropdown-label-padding + $dropdown-label-padding;
+
+/**
+ * control hover/focus effects
+ */
+$control-hover-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+
+/**
+ * Letter Spacing
+  */
+$letter-space-product: 0.2em;
+
+/*
+* Headerbar
+*/
+$headerbar-padding: 5.25px;
+$headerbar-height: 80px;
+$headerbar-line-height: 78px;
+
+/**
+* Enterprise Banners
+*/
+$enterprise-banner-standard-height: 405px;
+
+
+/**
+ * Breakpoints
+ */
+$breakpoint-small: 800px;
+$breakpoint-small-med: 1000px;
+$breakpoint-med: 1200px;
+$breakpoint-large: 1500px;

@@ -1,0 +1,271 @@
+
+<script id="polar-traces-box-template" type="text/html">
+<div class="slideout bottom editbox js-traces-box-panel polar">
+    <div class="arrow"></div>
+    <div class="panel-inner">
+        <div class="panel-content">
+            <div class="panel__header">
+
+                
+                <div class="panel-name">Traces</div>
+                <div class="widget">
+                    <select data-widget="trace-selector" class="selectpicker js-traces">
+                        <option value="all">All Traces</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <ul class="js-minimal-tabs-menu minimal-tabs">
+                <li><a href="#traces-panel-tab-1" class="link--tool">General</a></li>
+            </ul>
+
+            <div class="js-minimal-tabs-container">
+                <div id="traces-panel-tab-1" class="js-minimal-tabs-content minimal-tabs__content-panel popover-items">
+
+                    <div class="widget-group">
+                        <div class="description">Color:</div>
+                        <div class="widget">
+                            <label><input data-widget="color-selector" type='text' class="js-trace-color" name='color'> Fill </label>
+                            <label><input data-widget="color-selector" type='text' class="js-trace-stroke-color" name='color'> Stroke </label>
+                        </div>
+                    </div>
+
+                    <div class="widget-group">
+                        <div class="description"><input data-widget="checkbox" type="checkbox" class="js-show" value="visible"> Show</div>
+                    </div>
+
+                    <div class="widget-group">
+                        <div class="description"><input data-widget="checkbox" type="checkbox" class="js-show-in-legend" value="visible"> Show in Legend</div>
+                    </div>
+
+                    <div class="widget-group">
+                        <div class="description">Dash</div>
+                        <div class="widget">
+                            <label><input data-widget="radio-button" type="radio" class="js-dash"  name="js-dash" value="solid"> Solid </label>
+                            <label><input type="radio" class="js-dash" name="js-dash" value="dash"> Dash </label>
+                            <label><input type="radio" class="js-dash" name="js-dash" value="dot"> Dot </label>
+                        </div>
+                    </div>
+
+                    <div class="widget-group">
+                        <div class="description">Stroke Size:</div>
+                        <div class="widget">
+                            <input data-widget="spinner-slider" class="spinner js-stroke-size" value="1">
+                            <div class="slider inline js-stroke-size"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</script>
+
+<script id="polar-layout-box-template" type="text/html">
+    <div class="slideout bottom editbox js-layout-box-panel polar">
+        <div class="arrow"></div>
+        <div class="panel-inner">
+            <div class="panel-content">
+                <div class="panel__header">
+                    
+                    <div class="panel-name">Layout</div>
+                </div>
+
+                <ul class="js-minimal-tabs-menu minimal-tabs">
+                    <li><a href="#layout-panel-tab-1" class="link--tool">Style</a></li>
+                    <li><a href="#layout-panel-tab-2" class="link--tool">Layout</a></li>
+                </ul>
+
+                <div class="js-minimal-tabs-container">
+                    <div id="layout-panel-tab-1" class="js-minimal-tabs-content minimal-tabs__content-panel popover-items">
+
+                        <div class="widget-group">
+                            <div class="description">Plot Color:</div>
+                            <div class="widget">
+                                <input data-widget="color-selector" type='text' class="js-plot-color">
+                            </div>
+                        </div>
+
+                        <div class="widget-group">
+                            <div class="description">Margin Color:</div>
+                            <div class="widget">
+                                <input data-widget="color-selector" type='text' class="js-margin-color">
+                            </div>
+                        </div>
+
+                        <div class="widget-group">
+                            <div class="description">Font family:</div>
+                            <div class="widget">
+                                <select data-widget="font-selector" class="selectpicker js-font-family">
+                                    <option value="auto">&lt;auto&gt;</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="widget-group">
+                            <div class="description">Font Size:</div>
+                            <div class="widget">
+                                <input data-widget="spinner-slider" class="spinner js-font-size">
+                                <div class="slider inline js-font-size"></div>
+                            </div>
+                        </div>
+
+                        <div class="widget-group">
+                            <div class="description">Font Color:</div>
+                            <div class="widget">
+                                <input data-widget="color-selector" type='text' class="js-font-color">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="layout-panel-tab-2" class="js-minimal-tabs-content minimal-tabs__content-panel popover-items">
+
+                        <div class="widget-group">
+                            <div class="description">Width:</div>
+                            <div class="widget">
+                                <input data-widget="spinner-slider" class="spinner js-width">
+                                <div class="slider inline js-width"></div>
+                            </div>
+                        </div>
+
+                        <div class="widget-group">
+                            <div class="description">Height:</div>
+                            <div class="widget">
+                                <input data-widget="spinner-slider" class="spinner js-height" value="300">
+                                <div class="slider inline js-height"></div>
+                            </div>
+                        </div>
+
+                        <div class="widget-group">
+                            <div class="description">Padding:</div>
+                            <div class="widget">
+                                <input data-widget="spinner-slider" class="spinner js-padding" value="30">
+                                <div class="slider inline js-padding"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="polar-axes-box-template" type="text/html">
+    <div class="slideout bottom editbox js-axes-box-panel polar">
+        <div class="arrow"></div>
+        <div class="panel-inner">
+            <div class="panel-content">
+                <div class="panel__header">
+                    
+                    <div class="panel-name">Axes</div>
+                </div>
+
+                <ul class="js-minimal-tabs-menu minimal-tabs">
+                    <li><a href="#axes-panel-tab-1" class="link--tool">Style</a></li>
+                    <li><a href="#axes-panel-tab-2" class="link--tool">Layout</a></li>
+                </ul>
+
+                <div class="js-minimal-tabs-container">
+                    <div id="axes-panel-tab-1" class="js-minimal-tabs-content minimal-tabs__content-panel popover-items">
+
+
+                        <div class="widget-group">
+                            <div class="description">Orientation:</div>
+                            <div class="widget">
+                                <input data-widget="spinner-slider" class="spinner js-orientation" value="0">
+                                <div class="slider inline js-orientation"></div>
+                            </div>
+                        </div>
+
+                        <div class="widget-group">
+                            <div class="description">Direction: </div>
+                            <div class="widget">
+                                <label><input data-widget="radio-button" type="radio" class="js-direction" name="js-direction" value="clockwise"> Clockwise</label>
+                                <label><input type="radio" class="js-direction" name="js-direction" value="counterclockwise"> Counterclockwise</label>
+                            </div>
+                        </div>
+
+                        <div class="widget-group">
+                            <div class="description">Radial axis orientation:</div>
+                            <div class="widget">
+                                <input data-widget="spinner-slider" class="spinner js-radial-axis-orientation" value="0">
+                                <div class="slider inline js-radial-axis-orientation"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="axes-panel-tab-2" class="js-minimal-tabs-content minimal-tabs__content-panel popover-items">
+
+                        <div class="widget-group">
+                            <div class="description">Radial Range:</div>
+                            <div class="widget">
+                                <input data-widget="spinner" class="spinner js-radial-domain-min" name="min" value="0">
+                                <input data-widget="spinner" class="spinner js-radial-domain-max" name="max" value="1">
+                                <input data-widget="button" type="button" class="js-radial-domain-to-data-extent" value="To Data Extent">
+                            </div>
+                        </div>
+
+                        <div class="widget-group">
+                            <div class="description">Angular Range:</div>
+                            <div class="widget">
+                                <input data-widget="spinner" class="spinner js-angular-domain-min" name="min" value="0">
+                                <input data-widget="spinner" class="spinner js-angular-domain-max" name="max" value="1">
+                                <input data-widget="button" type="button" class="js-angular-domain-to-data-extent" value="To Data Extent">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="polar-legend-box-template" type="text/html">
+    <div class="slideout bottom editbox js-legend-box-panel polar">
+        <div class="arrow"></div>
+        <div class="panel-inner">
+            <div class="panel-content">
+                <div class="panel__header">
+                    
+                    <div class="panel-name">Legend</div>
+                </div>
+
+                <ul class="js-minimal-tabs-menu minimal-tabs">
+                    <li><a href="#legend-panel-tab-1" class="link--tool">Style</a></li>
+                    <li><a href="#legend-panel-tab-2" class="link--tool">Layout</a></li>
+                </ul>
+
+                <div class="js-minimal-tabs-container">
+                    <div id="legend-panel-tab-1" class="js-minimal-tabs-content minimal-tabs__content-panel popover-items">
+
+                        <div class="widget-group">
+                            <div class="description"><input data-widget="checkbox" type="checkbox" class="js-show" value="visible"> Show</div>
+
+                        </div>
+
+                    </div>
+                    <div id="legend-panel-tab-2" class="js-minimal-tabs-content minimal-tabs__content-panel popover-items">
+
+                        <div class="widget-group">
+                            <div class="description">Trace order: </div>
+                            <div class="widget">
+                                <label><input data-widget="radio-button" type="radio" class="js-trace-order" name="js-trace-order" value="normal"> Normal</label>
+                                <label><input type="radio" class="js-trace-order" name="js-trace-order" value="reversed"> Reversed</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</script>

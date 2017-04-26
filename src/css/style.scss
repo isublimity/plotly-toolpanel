@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/*
+ * ToolPanel SASS sheet
+ */
+
+// Old Inuit.css styles
+@import "css/vars";
+@import "css/inuit.css/inuit";
+@import "css/ui/_base.scss";
+@import "css/ui/_module-shared.scss";
+@import "css/ui/_module-app.scss";
+@import "css/ui/_ploticon-font.scss";
+@import "css/ui/_theme.scss";
+
+// New plotlycss styles
+@import "plotlycss/base/_variables.scss";
+@import "plotlycss/base/_mixins.scss";
+@import "plotlycss/layout/_helper.scss";
+@import "plotlycss/components/_inputs.scss";
+@import "plotlycss/components/tooltips.scss";
+@import "plotlycss/components/toolpanel.scss";
+@import "plotlycss/components/toolpanel-slideout.scss";
+@import "plotlycss/components/editbox.scss";
+
+// ToolPanel Plugins CSS
+@import "css/jquery-ui";
+@import "css/spectrum";
+@import "css/bootstrap-select.min";
+@import "css/tipsy";
+
+// Icons
+@import "../../../../../shelly/static/plotlycss/fonts/unified/icons";

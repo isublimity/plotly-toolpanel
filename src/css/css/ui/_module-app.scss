@@ -1,0 +1,443 @@
+
+/*------------------------  Converted modal styles  -----------------------*/
+
+.toolpanel-overlay {
+    background: $color-bg-light;
+}
+
+.toolpanel-overlay__header {
+    margin: 5px 10px 10px 10px;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+}
+
+.toolpanel-overlay__title {
+    display: inline-block;
+    margin: 0 10px 0 0;
+
+    i {
+        display: inline-block;
+        margin-right: -5px;
+    }
+
+    span {
+        display: inline-block;
+    }
+}
+
+.toolpanel-overlay__body {
+    /*overflow-y: auto;*/
+    /*max-height: 400px;*/
+    margin: 0 20px;
+}
+
+.toolpanel-overlay__section-heading {
+    margin: 0 0 10px 0;
+}
+
+.toolpanel-overlay__section:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.toolpanel-overlay__block:not(:last-of-type) {
+    margin: 0 0 10px 0;
+}
+
+.toolpanel-overlay__block--inner {
+    padding: 15px;
+    overflow: hidden;
+    clear: both;
+    background: #f5f5f5;
+}
+
+.toolpanel-overlay__footer {
+    padding: 20px;
+    text-align: right;
+}
+
+.toolpanel-overlay__msg {
+    width: auto;
+    padding: 6px;
+    border-bottom: 1px solid;
+
+    .xout {
+        float: right;
+        display: inline-block;
+        padding: 0 6px;
+    }
+}
+
+.toolpanel-overlay__close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    float: right;
+    padding: 5px 10px;
+
+    &:hover {
+        color:#000000;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+    }
+}
+
+/*------------------------  Labeled input set module  -----------------------*/
+
+.labeled-input-set {
+    .input-prepend {
+        display: inline-block;
+    }
+}
+
+
+/*--------------------------  Tooltip alert module  -------------------------*/
+
+.tooltip-alert {
+    display: inline;
+    padding: 5px 8px;
+    margin-left: 20px;
+    border: 1px solid;
+}
+
+
+/*--------------------------  Radio button module  --------------------------*/
+
+input.radio__btn {
+    display: inline-block;
+    margin: -5px 10px 0 0;
+}
+
+.radio__label {
+    display: inline-block;
+    margin: 0;
+}
+
+.radio__descrip {
+    display: inline-block;
+    margin: 0 0 5px 10px;
+}
+
+.radio__option {
+
+    &:not(:last-child) {
+        margin-bottom: $base-spacing-unit/2;
+    }
+
+    &:last-child {
+
+        .share__url-field {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.radio__option--horiz {
+    display: inline-block;
+
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+
+/*--------------------------  options module (radio buttons or checkboxes) --------------------------*/
+
+.option {
+    &:not(:last-child) {
+        margin-bottom: $base-spacing-unit/2;
+    }
+
+    &:last-child {
+        .share__url-field {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.option--horiz {
+    display: inline-block;
+
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+.option__btn {
+    display: inline-block;
+    margin: -$half-spacing-unit/2 $half-spacing-unit 0 0;
+}
+
+.option__contents {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.option__label {
+    display: inline-block;
+    margin: 0 0 $half-spacing-unit 0;
+}
+
+.option__descrip {
+    display: inline-block;
+    margin: 0 0 $half-spacing-unit/2 $half-spacing-unit;
+}
+
+.option__this-choice-more {
+    .slider-val {
+        display: inline-block;
+        width: 50px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .slider {
+        display: inline-block;
+        width: 80px;
+        height: 8px;
+        vertical-align: middle;
+        border-radius: 2px;
+        border: 1px solid;
+
+        .ui-slider-handle {
+            top: -7px;
+            height: 20px;
+            margin-left: -6px;
+            width: 12px;
+            border-radius: 0 !important;
+            border: 1px solid;
+        }
+    }
+}
+
+.option__more-item {
+    display: inline-block;
+    margin: 0 $base-spacing-unit $half-spacing-unit 0;
+}
+
+.option__more-item-label {
+    margin-bottom: $half-spacing-unit/2;
+}
+
+
+/*------------------------------  Menu module  ------------------------------*/
+
+.tool-menu {
+    padding: 3px 3px 1px 3px;
+    white-space: normal;
+
+    .fileinput-button {
+        float: none;
+        padding-top: 3px !important;
+        padding-left: 2px !important;
+    }
+
+}
+
+.tool-menu__btn-list {
+    padding: 3px;
+    margin: 0 50px 0 0;
+    display: inline-block;
+    vertical-align: top;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    & > li {
+        display: inline-block;
+        position: relative;
+        margin-right: $half-spacing-unit;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        & > a {
+            display: inline-block;
+            padding: 3px 2px 3px 2px;
+            vertical-align: middle;
+        }
+    }
+
+    i {
+        display: inline-block !important;
+        vertical-align: middle;
+        margin-bottom: 2px;
+    }
+
+    img[class^=ploticon-plot] {
+        padding-right: 6px;
+    }
+}
+
+.tool-menu__icon-label {
+    margin-bottom: 0;
+}
+
+.tool-menu__label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tool-menu__link-list {
+    float: right;
+    padding: 2px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    z-index: 1;
+
+    & > li {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        & > a {
+            padding: 3px 6px;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+
+
+/*--------------------------  Popover module  --------------------------*/
+
+.popover-content {
+    padding: 9px 14px;
+}
+
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    display: none;
+    min-width: 236px;
+    padding: 1px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border: 1px solid;
+
+    .arrow {
+            position: absolute;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+        &:after {
+            content: '';
+            z-index: -1;
+        }
+    }
+
+    &.top {
+        margin-bottom: 10px;
+    }
+
+    &.right {
+        margin-left: 10px;
+    }
+
+    &.bottom {
+        margin-left: 10px;
+
+        .arrow {
+            top: -10px;
+            left: 50%;
+            margin-left: -10px;
+            border-width: 0 10px 10px;
+            border-bottom-color: #ffffff;
+
+            &:after {
+                top: -1px;
+                left: -11px;
+                border-width: 0 11px 11px;
+                border-bottom-color: rgba(0,  0,  0,  0.25);
+            }
+        }
+    }
+
+    &.left {
+        margin-right: 10px;
+    }
+}
+
+.popover__header {
+}
+
+.popover__header-label {
+    display: inline-block;
+    padding: 5px;
+}
+
+/*--------------------------  Minimal-tabs module  --------------------------*/
+
+.minimal-tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    & > li {
+        display: inline-block;
+        /*height: 30px !important;*/
+        margin: 0 5px 0 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.current {
+            /*height: 30px !important;*/
+        }
+
+        a {
+            display: block;
+            padding: 5px 7px;
+        }
+    }
+}
+
+.minimal-tabs--alt {
+    & > li {
+        margin-bottom: -1px;
+        border: 1px solid;
+    }
+}
+
+.content-panel {
+    width: 100%;
+    padding: 10px;
+}
+
+.content-panel--alt {
+    border: 1px solid;
+}
+
+
+
+/*--------------------------  Modal modules  --------------------------*/
+
+#jsonModal #json-text{
+  width:100%;
+  height:300px;
+}

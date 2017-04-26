@@ -1,0 +1,491 @@
+/**
+ * Default sizes and widths for slideout-contents
+ */
+.tracesbox .trace-dropdown,.axesbox .trace-dropdown {
+    width:100%;
+}
+
+.tracesbox {
+    min-width: 512px;
+}
+
+.layoutbox .inputcenter .inputtext {
+    margin-left:42px;
+}
+
+.axesbox .inputtext {
+    width:120px;
+}
+
+.notesbox .trace-dropdown > .select-ann,.axesbox .trace-dropdown .editboxselector {
+    margin-right:10px;
+    display:inline-block;
+}
+
+.notesbox .trace-dropdown > button {
+    margin-right:-1px;
+}
+
+.layoutbox,.axesbox,.notesbox,.legendbox,.fitbox {
+    width:512px;
+}
+
+.gradient{
+    width: 20px;
+    height: 60px;
+    margin: 4px;
+    border: 1px solid black;
+}
+
+/**
+ * editbox (toolpanel slideout contents)
+ */
+.editbox{
+    z-index: 1030 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    padding: 0;
+}
+
+.editbox .empty-item {
+    display: none;
+}
+
+.editbox .trace-dropdown {
+    display: inline-block;
+    padding: 5px 5px 6px 5px;
+    background: #ccc;
+}
+.editbox .trace-dropdown>span {
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.editbox .arrow { border-bottom-color: #ccc !important; }
+
+.editbox .popover-content{
+    clear: both;
+    padding: 0;
+    background: #ccc;
+}
+.editbox .popover-items{
+    float: left;
+    padding: 9px 14px;
+    width: 100%;
+}
+.editbox .popover-items>div{
+    float: left;
+    clear: both;
+    margin: 6px 0;
+}
+.editbox .editboxtitle{
+    display: inline-block;
+    width:100px;
+}
+.editboxselector input{
+    margin: 0;
+    width: 80px;
+}
+.editbox .dropdown{
+    min-width: 60px !important;
+    max-height: 500px;
+    overflow-y: auto;
+}
+.editbox .dropdown li{
+    cursor: pointer;
+}
+.editbox .dropdown li:hover{
+    background-color: #08c;
+    color: white;
+}
+.editbox .selected-val, .editbox li span{
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.editbox .selected-val span, .editbox .selected-val svg {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.editboxbutton{
+    font-size: 14px;
+}
+
+.editboxselector {
+    vertical-align: middle;
+}
+
+.editboxselector .dropdown-menu svg, .editboxselector .dropdown-menu span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.editboxselector .editboxselector{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.editboxselector .btn-group {
+    display: inline-block;
+}
+
+.editboxselector>a {
+    margin-left: 10px;
+    color: #0088cc;
+}
+
+.editbox .slider{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    height: 8px;
+    /*margin: 8px 0px;*/
+    border-radius: 2px;
+    border: 1px solid #bbb;
+    background-color: #f5f5f5;
+}
+.editbox .slider .ui-slider-handle{
+    position: absolute;
+    top: -7px;
+    height: 20px;
+    margin-left: -6px;
+    width: 12px;
+    border-radius: 0 !important;
+    border: 1px solid #bbb;
+}
+.editbox .slider-val{
+    display: inline-block;
+    margin-right: 10px;
+    width: 50px;
+}
+.editbox .slider-up, .editbox .slider-dn {
+    vertical-align: middle;
+    padding: 0 2px;
+}
+.editbox .slider-up {
+    margin-right: 8px;
+}
+.editbox .slider-dn {
+    margin-right: -1px;
+}
+
+.editbox .pickoption .btn-group {
+    display: inline-block;
+}
+
+.editbox .pickoption.grouptop { margin-bottom:0; }
+.editbox .pickoption.grouptop button { border-bottom-left-radius:0; }
+.editbox .pickoption.groupbottom { margin-top:-1px; }
+.editbox .pickoption.groupbottom button { border-top-left-radius:0; }
+
+.editbox .pickgrid .btn {
+    width: 35px;
+    height: 22px;
+    padding: 0;
+}
+
+.editbox .side-by-side .editboxtitle{
+    width: auto;
+}
+
+.option__label {
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.slider {
+    border-color: #bbb;
+    background-color: #f5f5f5;
+
+    .ui-slider-handle {
+        border-color: #bbb;
+    }
+}
+
+.option__more-item-label {
+    font-size: 12px;
+}
+
+.ui-state-default {
+    background: #F4F4F8;
+}
+
+/**
+ * Editbox Dropdowns
+ */
+.dropdown-menu::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.dropdown-menu::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.dropdown-menu::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.dropdowm-menu::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+
+.fit__overview {
+    text-align: center;
+}
+
+.fit__overview--plot {
+    padding: 15px 0;
+    margin: 0;
+
+    .fit__eqn {
+        padding-right: $base-spacing-unit;
+    }
+}
+
+.fit__overview--grid {
+    min-width: 270px;
+    max-width: 400px;
+
+    .fit__overview-status-msg {
+        margin-top: $base-spacing-unit;
+    }
+
+    .fit__overview-title {
+        margin-top: $half-spacing-unit/2;
+    }
+}
+
+.fit__overview-inner {
+    max-height: 200px;
+    overflow: auto;
+    padding: 0 $half-spacing-unit;
+}
+
+.fit__overview-inner--grid {
+    padding: 0;
+}
+
+.fit__trace-label, .fit__trace-cols {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: $base-spacing-unit;
+}
+
+.fit__trace-axis {
+    margin-bottom: $half-spacing-unit/2;
+}
+
+.fit__trace-axis-label {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1px 7px 2px 7px;
+    margin-right: $half-spacing-unit/2;
+    border: 1px solid;
+    border-radius: 2px;
+}
+
+.fit__trace-axis-col {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: $half-spacing-unit/2;
+    min-width: 150px;
+}
+
+.fit__overview-title {
+    margin-bottom: $half-spacing-unit;
+}
+
+.fit__overview-table {
+    td {
+        padding: 2px;
+    }
+
+    svg {
+        vertical-align: top;
+    }
+}
+
+.fit__overview-status-msg {
+    margin: 5px 0 20px 0;
+}
+
+.fit__results--plot {
+    padding: 15px;
+}
+
+.fit__results--grid {
+    padding: $half-spacing-unit 0 0 0;
+}
+
+.fit__results-table {
+    margin-bottom: 15px;
+}
+
+.fit__params--plot {
+    width: 380px;
+}
+
+.fit__params--grid {
+    width: 300px;
+}
+
+.fit__param-name {
+    display: inline-block;
+    text-align: left;
+}
+
+.fit__param-equals {
+    display: inline-block;
+    text-align: center;
+    width: $base-spacing-unit;
+}
+
+.fit__param-val {
+    display: inline-block;
+    text-align: right;
+}
+
+.fit__options--plot {
+    .fit__cta-btns {
+        padding: 0 15px 15px;
+    }
+}
+
+.fit__cta-btns {
+    clear: both;
+}
+
+
+/*--------------------------  Polar panels  --------------------------*/
+
+.polar {
+    min-width: 400px;
+}
+
+.polar .panel-content, .polar label,
+.polar legend, .polar button{
+    margin: 0;
+    padding: 0;
+}
+.polar .panel-name{
+    font-weight: bold;
+    padding: 5px;
+}
+.polar .panel-content{
+    background: #ccc;
+}
+.polar .panel-inner, .polar.panel{
+    display: block;
+    max-width: none;
+}
+.polar.panel{
+    background-color: white;
+    position: absolute;
+    left: 0;
+    cursor: move;
+}
+.polar .btn{
+    background-image: none;
+    background-color: #f3f3f3;
+    border: 1px solid silver;
+}
+.polar .btn-group.open .btn.dropdown-toggle, .polar .btn:hover, .polar .btn:focus{
+    background-color: white;
+}
+.polar .btn-group{
+    display: inline-block!important;
+}
+.polar .ui-widget-content{
+    border: 1px solid silver;
+    background-color: #f3f3f3;
+}
+.polar .btn.dropdown-toggle{
+    height: 30px;
+    width: 150px;
+}
+.polar .ui-widget-content.ui-tabs-panel, .polar .ui-widget-content.ui-tabs{
+    border: none;
+    background-color: white;
+}
+.polar input, .polar label, .polar .description,
+.polar fieldset, .polar .ui-spinner, .polar legend, .polar .ui-slider{
+    margin: 0 10px 0 0!important;
+}
+.polar label{
+    display: inline-block;
+    padding-right: 5px;
+}
+.polar .widget-group{
+    /*border: 1px solid red;*/
+    clear: both;
+    margin: 0;
+    float: none;
+}
+.polar .widget-group .description{
+    width: 140px;
+    margin-bottom: 50px;
+    /*border: 1px solid green;*/
+    display: block;
+    float: left;
+}
+.polar .widget-group .widget{
+    float: left;
+}
+.polar legend{
+    padding: 10px 0 0 0;
+    text-transform:uppercase;
+    text-align: center
+}
+.polar input.spinner{
+    padding-left: 5px!important;
+    margin: 0!important;
+    width: 40px!important;
+}
+.polar .ui-slider-horizontal.inline {
+    width: 130px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.polar .ui-spinner{
+    width: 60px;
+}
+.polar input[type="button"]{
+    border: solid silver 1px;
+    background-color: #eee;
+    vertical-align: top;
+}
+.polar input[type="text"]{
+    border: solid silver 1px;
+    background-color: white;
+    vertical-align: top;
+    width: 40px!important;
+}
+.polar .panel-content>ul {
+    height: auto!important;
+}
+.polar input {
+    width: auto!important;
+}
+.polar .bootstrap-select.btn-group, .polar .bootstrap-select.btn-group[class*="span"] {
+    width: 150px!important;
+    margin: 0px 0 5px 5px;
+}
+.polar .panel__header {
+    background-color: #ccc;
+}
+.polar .panel__close{
+    float: right;
+    margin-right: 5px;
+}

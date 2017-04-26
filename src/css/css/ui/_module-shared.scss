@@ -1,0 +1,414 @@
+
+
+/*-----------------------------  Helper classes  ----------------------------*/
+
+.full-width-box {
+    width: 100%;
+    margin: 0;
+}
+
+.soft-quarter           { padding:        $half-spacing-unit/2 !important; }
+.soft-quarter--top      { padding-top:    $half-spacing-unit/2 !important; }
+.soft-quarter--right    { padding-right:  $half-spacing-unit/2 !important; }
+.soft-quarter--bottom   { padding-bottom: $half-spacing-unit/2 !important; }
+.soft-quarter--left     { padding-left:   $half-spacing-unit/2 !important; }
+.soft-quarter--ends     { padding-top:    $half-spacing-unit/2 !important; padding-bottom: $half-spacing-unit/2 !important; }
+.soft-quarter--sides    { padding-right:  $half-spacing-unit/2 !important; padding-left:   $half-spacing-unit/2 !important; }
+
+.push-quarter--right    { margin-right:   $half-spacing-unit/2 !important; }
+.push-quarter--bottom   { margin-bottom:  $half-spacing-unit/2 !important; }
+
+
+.push-double--left {
+    margin-left: 2*$base-spacing-unit !important;
+}
+
+.block--center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block--center--img {
+    max-height: 100%;
+}
+
+.no-resize {
+    resize: none;
+    overflow: auto;
+}
+
+.bold {
+    font-weight: 400 !important;
+}
+
+.img-with-caption {
+    padding: $half-spacing-unit/2 0;
+    margin-bottom: $base-spacing-unit;
+
+    img {
+        margin-bottom: $half-spacing-unit;
+    }
+}
+
+.img--border {
+    border: 1px solid;
+}
+
+.link--img {
+    display: block;
+
+    img {
+        display: block;
+    }
+}
+
+/*-----------------------------  Buttons module  ----------------------------*/
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.btn--icon {
+    border: none;
+    padding: 3px 4px;
+}
+
+.btn--big, .btn--xl {
+    padding: 15px;
+}
+
+.btn--med {
+    padding: 10px 12px;
+}
+
+.btn--small {
+    padding: 3px 7px;
+}
+
+.btn--plain {
+    border: 1px solid;
+}
+
+.btn--social {
+    padding: 4px;
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.btn--neighbor {
+    margin-right: -1px;
+}
+
+.btn--input-neighbor {
+    height: 31px;
+    margin-left: -1px;
+    vertical-align: top
+}
+
+.btn--tab-tool {
+    height: 23px;
+    text-align: center;
+
+    .btn--tab-tool__icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 2px;
+    }
+
+    .btn--tab-tool__text {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 2px;
+    }
+}
+
+
+/*--------------------------  Button group module  --------------------------*/
+
+.btn-group {
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    *margin-left: $half-spacing-unit;
+
+    &:first-child {
+        *margin-left: 0;
+    }
+
+    & > .btn {
+        position: relative;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        & + .btn {
+            margin-left: -1px;
+        }
+    }
+
+    & + .btn-group, & + .btn {
+        margin-left: $half-spacing-unit;
+    }
+}
+
+.btn-group.btn-group--logo {
+    -webkit-transform: translate(-5px, 2px);
+    transform: translate(-5px, 2px);
+    a {
+        color: $color-brand-primary;
+        font-size: 22px;
+    }
+}
+
+.btn-group--vertical {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+
+    .btn {
+        display: block;
+        float: none;
+        width: 100%;
+
+        & + .btn {
+            margin-left: 0;
+            margin-top: -1px;
+        }
+    }
+}
+
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 99999;
+    display: none;
+    /*float: left;*/
+    margin: 0;
+    padding: 0;
+    left: auto;
+    border: 1px solid;
+    min-width: 150px;
+    max-height: 500px;
+    overflow-y: scroll;
+
+    li {
+        display: block;
+        clear: both;
+        width: 100%;
+        top: 0px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        line-height: $base-spacing-unit;
+
+
+        &.no-link {
+            width: auto !important;
+            padding: 4px 6px !important;
+            cursor: default;
+        }
+    }
+
+    a {
+        float: none !important;
+        display: block;
+        padding: 4px 6px !important;
+        margin: 0 !important;
+        list-style: none !important;
+        text-align: left;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    i {
+        display: inline-block;
+        /*padding-top: 3px;*/
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.dropdown-menu--right-align {
+    right: 0;
+}
+
+.dropdown-menu--grouped {
+
+    li ul {
+        margin-left: 0;
+    }
+
+    li:not(:last-child) ul {
+        margin-bottom: 10px;
+    }
+
+    li:last-child ul {
+        margin-bottom: 0;
+    }
+
+    .group-name {
+        width: auto !important;
+        text-align: left;
+        cursor: default;
+        float: none !important;
+        display: block;
+        padding: 6px 6px 3px 6px !important;
+        margin: 0 !important;
+        list-style: none !important;
+        text-align: left;
+    }
+}
+
+.dropdown-menu--grid {
+    & > li {
+        clear: none;
+        display: inline-block;
+        width: auto;
+        vertical-align: top;
+    }
+    li ul {
+        margin-left: 0;
+    }
+}
+
+.dropup, .dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    *margin-bottom: -3px;
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle {
+    outline: 0;
+}
+
+.dropdown-toggle--fixed-width {
+    width: 165px !important;
+    border: 1px #ccc solid;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+
+    .caret {
+        float: right;
+        margin: 8px 0;
+    }
+}
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 4px solid #000000;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: '';
+    margin-left: 5px;
+}
+
+.dropdown .caret {
+    margin-left: 2px;
+}
+
+.open{
+    *z-index: 1000;
+}
+
+.open > .dropdown-menu {
+    display: block;
+}
+
+/*-----------------  Content-editable mods go here for now  -----------------*/
+
+.contenteditable-wrapper {
+    display: inline-block;
+}
+
+/*----------------  Bootstrap popover mods go here for now  -----------------*/
+
+.popover.editbox {
+    /*margin-top: 25px;*/
+}
+
+/*------------------------------  Alert module  ----------------------------*/
+
+.alert {
+    width: 240px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    margin-top: 85px;
+    margin-right: 25px;
+    border: 1px solid;
+    z-index: 100;
+}
+
+.alert__contents {
+    margin: 0;
+    padding: $base-spacing-unit;
+
+    i {
+        margin-right: 5px;
+    }
+}
+
+
+/*-----------------------------  Thumbnail module  ----------------------------*/
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+}
+
+.thumbnail-label-display{
+    text-align: right;
+    margin: 5px 0px;
+    margin-right: 40px;
+}
+
+.thumbnail-label-display > .close{
+    left: 50%;
+    margin-left: 40px;
+}
+
+/*-------------------------------  Helpers...  ------------------------------*/
+
+/*USE ONLY IF THIS IS THE ONLY RULE TO APPLY TO AN ELEMENT!!! */
+.pos-rel {
+    position: relative;
+}
+
+
+/*-----------------------  Plot-specific stuff module  ----------------------*/
+
+.legend, .anndrag {
+    cursor: move;
+}
+
+.legendtext {
+    cursor: text;
+}
+
+.zoombox {
+    position: absolute;
+    z-index: 2000;
+    width: 0px;
+    height: 0px;
+}
