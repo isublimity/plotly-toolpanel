@@ -1,0 +1,60 @@
+/**
+ * ToolPanel slideout component
+ */
+
+.slideout-container {
+    display: inline-block;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0px;
+    background-color: $color-white;
+    z-index: 999;
+    width: 0px;
+    height: 0px;
+    @include vendor(box-shadow, 0 5px 10px rgba(0, 0, 0, 0.2));
+
+    &.\--slide-left {
+        @include transition(width 0.5s, left 0.5s, right 0s, ease-in-out);
+        left: 0;
+        right: 0;
+    }
+
+    &.\--slide-right {
+        @include transition(width 0.5s, right 0s, ease-in-out);
+        right: 0;
+        left: 0;
+    }
+
+    &.\--slide-bottom {
+        @include transition(height 0.5s, ease-in-out);
+    }
+
+    &.\--slide-top {
+        @include transition(height 0.5s, top 0.5s, ease-in-out);
+    }
+}
+
+.slideout {
+    position: absolute;
+    background: $color-bg-light;
+    border-color: $color-lines;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.slideout-header {
+
+    background: $color-lines;
+
+    .panel-name {
+        font-weight: bold;
+        padding: $quarter-spacing-unit;
+    }
+
+}
+
+.slideout-content {
+
+    .tab-content {
+        padding: $quarter-spacing-unit $half-spacing-unit;
+    }
+}

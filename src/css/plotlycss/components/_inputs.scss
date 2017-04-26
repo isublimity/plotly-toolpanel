@@ -1,0 +1,95 @@
+.inputfield, .text-area {
+    display: inline;
+    vertical-align: middle;
+    border: 1px solid $color-border;
+    overflow: hidden;
+    width: 150px;
+    color: black;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: $base-font-size;
+    cursor: text;
+
+    &:focus {
+        outline: none;
+        border: 1px solid $color-lines !important;
+
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+
+        transition: none !important;
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+    }
+}
+
+.inputfield {
+    white-space: nowrap;
+}
+
+.inputfield.\--big {
+    padding: 10px;
+}
+
+.inputfield.\--small {
+    padding: 3px;
+    font-size: 12px;
+}
+
+.inputfield.\--tall {
+    height: 160px;
+}
+
+.inputfield.\--extra-tall {
+    height: 223px;
+}
+
+.inputfield.\--maxwidth {
+    width: 100%;
+}
+
+.text-area.\--maxwidth {
+    width: 100%
+}
+
+.inputfield.\--wide {
+    width: 300px;
+}
+
+.inputfield.\--wider {
+    width: 400px;
+}
+
+.inputfield.\--extrawide {
+    width: 500px;
+    max-width: 100%;
+}
+
+.inputfield.\--narrow {
+    width: 83px;
+}
+
+.inputfield.\--disabled {
+    color: $color-muted-text;
+    @include vendor(user-select, none);
+}
+
+.inputfield-imitator {
+    display: block;
+    vertical-align: middle;
+    border: 1px solid $color-border;
+    overflow: hidden;
+    width: 400px;
+    color: $color-lines;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: $small-font-size;
+    cursor: default;
+}
+
+.input-icon {
+    position: absolute;
+    bottom:8px;
+    right:10px;
+}

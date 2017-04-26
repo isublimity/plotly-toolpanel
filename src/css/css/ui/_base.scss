@@ -1,0 +1,223 @@
+
+/*----------------------------------  Text  ---------------------------------*/
+
+.small {
+    font-size: 12px;
+}
+
+.keyword {
+    font-weight: 600;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/*---------------------------------  Links  ---------------------------------*/
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.link--default {
+    cursor: pointer;
+    color: #888;
+
+    &:hover {
+        color: #444;
+        text-decoration: none;
+    }
+}
+
+.link--blocky {
+    display: inline-block;
+    padding: 5px;
+
+    i {
+        padding: 2px 5px;
+    }
+}
+
+
+.code {
+    font-family: 'Inconsolata', monospace, verdana, sans-serif;
+}
+
+.code--inline {
+    color: $color-inline-code;
+}
+
+.link--impt {
+    color: $color-brand-primary;
+
+    &:hover {
+        color: #3c6dc5;
+    }
+}
+.link--impt-highlight {
+    padding: 10px;
+    color: $color-brand-primary;
+    cursor:pointer;
+
+    &:hover {
+        color: white;
+        background-color: $color-brand-primary;
+    }
+}
+.link--impt-inv {
+    background: $color-brand-primary;
+    color: #fff;
+
+    &:hover {
+        background: #3c6dc5;
+    }
+}
+
+.link--tool {
+    color: $color-click;
+
+    &.disabled {
+        cursor: default;
+        color: #a0a6b3;
+    }
+
+    &:hover, &:active, &.active {
+        color: $color-brand-primary;
+
+        &.disabled {
+            color: #a0a6b3;
+        }
+    }
+
+    &.\--fork{
+        background: #2391fe;
+        color: white !important;
+        padding: 0px 10px;
+        border-radius: 3px;
+    }
+}
+
+
+.link--plain {
+    color: black;
+
+    &:hover, &:active, &.active {
+        color: $color-brand-primary;
+
+        &.disabled {
+            color: #a0a6b3;
+        }
+    }
+}
+
+.link--icon {
+    color: #a0a6b3;
+
+    &:hover, &:active, &.active {
+        color: $color-brand-primary;
+    }
+}
+
+.link--img {
+    color: #a0a6b3;
+
+    &:hover, &:active, &.active {
+        color: $color-click;
+    }
+}
+
+.link--bold {
+    font-weight: inherit;
+}
+
+.link--primary-nav {
+    color: $color-click;
+    font-size: 14px;
+
+    &:hover, &:active, &.active {
+        color: $color-brand-primary;
+    }
+
+    &.active {
+        font-weight: 600;
+    }
+
+}
+
+/*------------------------------  Form fields  ------------------------------*/
+
+.input, .text-area {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    display: inline;
+    vertical-align: middle;
+    padding: 5px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+
+    &:focus {
+        outline: none;
+        border: 1px solid #a9b3c7 !important;
+
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+
+        transition: none !important;
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+    }
+}
+
+.input {
+    white-space: nowrap;
+}
+
+.text-area {
+    white-space: pre-wrap;
+}
+
+.input--width-max {
+    width: 100%;
+}
+
+.input--width-lrg {
+    width: 300px;
+}
+
+.input--width-huge {
+    width: 500px;
+}
+
+.input--width-medium {
+    width: 150px !important;
+}
+
+.input--width-small {
+    width: 83px;
+}
+
+.input--width-tiny {
+    width: 50px;
+}
+
+.input--big {
+    padding: 10px;
+}
+
+.input--small {
+    padding: 3px;
+    font-size: 12px;
+}
+
+.select--tool {
+    width: auto; /* override bootstrap :( */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}

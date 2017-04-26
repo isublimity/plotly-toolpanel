@@ -1,0 +1,65 @@
+<div id="newAxesOverlay" class="toolpanel-overlay" data-keyboard="false">
+    <button type="button" class="toolpanel-overlay__close" data-dismiss="toolpanel-overlay">&times;</button>
+    <div class="toolpanel-overlay__header">New Axes</div>
+    <div class="toolpanel-overlay__body">
+        <div id="new-axes-tracename"></div>
+        <div id="new-axes-base-subplot"></div>
+        <div class="toolpanel-overlay__section">
+            <div class="toolpanel-overlay__block toolpanel-overlay__block--inner">
+                <p><b>New Y</b></p>
+                <div class="radio__option--horiz">
+                    <input id="new-axes-right-y" class="radio__btn" type="radio" name="new-axes" value="right-y" checked="checked"/>
+                    <label class="radio__label" for="new-axes-right-y">Right</label>
+                </div>
+                <div class="radio__option--horiz">
+                    <input id="new-axes-stacked-y" class="radio__btn" type="radio" name="new-axes" value="stacked-y"/>
+                    <label class="radio__label" for="new-axes-stacked-y">Stacked</label>
+                </div>
+                <div class="radio__option--horiz">
+                    <input id="new-axes-free-y" class="radio__btn" type="radio" name="new-axes" value="free-y"/>
+                    <label class="radio__label" for="new-axes-free-y">Free left</label>
+                </div>
+            </div>
+        </div>
+        <div class="toolpanel-overlay__section">
+            <div class="toolpanel-overlay__block toolpanel-overlay__block--inner">
+                <p><b>New X</b></p>
+                <div class="radio__option--horiz">
+                    <input id="new-axes-top-x" class="radio__btn" type="radio" name="new-axes" value="top-x"/>
+                    <label class="radio__label" for="new-axes-top-x">Top</label>
+                </div>
+                <div class="radio__option--horiz">
+                    <input id="new-axes-side-x" class="radio__btn" type="radio" name="new-axes" value="side-x"/>
+                    <label class="radio__label" for="new-axes-side-x">Side-by-side</label>
+                </div>
+                <div class="radio__option--horiz">
+                    <input id="new-axes-free-x" class="radio__btn" type="radio" name="new-axes" value="free-x"/>
+                    <label class="radio__label" for="new-axes-free-bottom-x">Free</label>
+                </div>
+            </div>
+        </div>
+        <div class="toolpanel-overlay__section">
+            <div class="toolpanel-overlay__block toolpanel-overlay__block--inner">
+                <p><b>New Subplot</b></p>
+                <div class="radio__option--horiz">
+                    <input id="new-axes-stacked-subplot" class="radio__btn" type="radio" name="new-axes" value="stacked-subplot"/>
+                    <label class="radio__label" for="new-axes-stacked-subplot">Stacked</label>
+                </div>
+                <div class="radio__option--horiz">
+                    <input id="new-axes-side-subplot" class="radio__btn" type="radio" name="new-axes" value="side-subplot"/>
+                    <label class="radio__label" for="new-axes-side-subplot">Side-by-side</label>
+                </div>
+                <div class="radio__option--horiz">
+                    <input id="new-axes-inset-subplot" class="radio__btn" type="radio" name="new-axes" value="inset-subplot"/>
+                    <label class="radio__label" for="new-axes-inset-subplot">Inset</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolpanel-overlay__footer text--center">
+        <a href="#" id="new-axes-go" class="btn btn--med btn--cta btn--primary catch-return" data-dismiss="toolpanel-overlay">
+            Go
+        </a>
+    </div>
+</div>

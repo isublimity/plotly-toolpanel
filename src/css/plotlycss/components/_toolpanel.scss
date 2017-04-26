@@ -1,0 +1,265 @@
+$tool-button-height: 40px;
+$tool-button-width: 120px;
+$tool-button-minimal-width: 41px;
+
+/************** ORIGINAL WORKSPACE TOOLPANEL **************/
+//+minimal workspace toolpanel modifier
+
+.toolmenu {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: $tool-button-width;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    padding-top: 30px;
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        &:first-child{
+            border-top: 1px solid $color-toolmenu-border-light;
+        }
+    }
+
+    li {
+        list-style: none;
+        margin: auto;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: 'Open Sans', verdana, arial, sans-serif;
+    }
+
+    p {
+        margin: 0;
+    }
+
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &.\--minimal {
+        width: $tool-button-minimal-width;
+        overflow: hidden;
+        float: left;
+        padding-bottom: 30px;
+
+        ul:first-child {
+            border-top: 1px solid $color-toolmenu-border-light;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    &.\--horizontal {
+        padding: 0px;
+        overflow: hidden;
+        float: left;
+        max-height: $tool-button-height;
+        width: 100%;
+        border: 1px solid $color-toolmenu-border-light;
+
+        p {
+            display: none;
+        }
+
+        ul{
+            width: 100%;
+
+            &:first-child{
+                border: 0px;
+            }
+        }
+
+        li {
+            display: inline;
+            list-style-type: none;
+            float: left;
+
+            &.\--left{
+                float: left;
+            }
+
+            &.\--right{
+                float: right;
+                border-left: 1px solid $color-toolmenu-border-light;
+
+                .toolmenu-button {
+                    border-right: 0px solid $color-toolmenu-border-light;
+                }
+            }
+        }
+
+        &.\--mini {
+            background-color: $color-toolmenu-lightgrey-bg;
+        }
+    }
+}
+
+.toolmenu-list {
+    display: inline-block;
+    position: relative;
+}
+
+.toolmenu-button-row {
+    display: block;
+    height: auto;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: $tool-button-width;
+    float: left;
+    border-left: 1px solid $color-toolmenu-border-light;
+
+    &.\--minimal {
+        width: $tool-button-height;
+        border-left: 1px solid $color-toolmenu-border-light;
+    }
+
+    &.\--horizontal {
+        width: auto;
+        border: 0px;
+    }
+}
+
+.toolmenu-button {
+    display: block;
+    height: $tool-button-height;
+    margin: auto;
+    text-align: left;
+    color: $color-click;
+    background-color: $color-toolmenu-offwhite;
+    padding-right: 3px;
+    padding-left: 10px;
+    border-bottom: 1px solid $color-toolmenu-border-light;
+    border-right: 1px solid $color-toolmenu-border-light;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: $font-size-sm-rem;
+
+
+    @extend .dark-hover;
+
+    &:before, &:after {
+        box-sizing: border-box;
+    }
+
+    i {
+        font-size: $font-size-sm-rem;
+        line-height: $tool-button-height;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    p {
+        line-height: $tool-button-height;
+        display: inline;
+        vertical-align: middle;
+    }
+
+    &.\--is-active {
+        background-color: $color-toolmenu-darkgrey-bg;
+    }
+
+    &.\--mini {
+        display: inline-block;
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+        width: 100%;
+        height: $tool-button-height;
+        border-right: 1px solid $color-toolmenu-border-light;
+        border-bottom: 1px solid $color-toolmenu-border-light;
+
+        i {
+            line-height: $tool-button-height;
+            margin-right: 0px;
+            display: inline-block;
+        }
+
+        &.\--minimal-mini {
+            i {
+                line-height: $tool-button-height;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            p {
+                display: none;
+            }
+        }
+    }
+
+    &.\--minimal {
+        width: $tool-button-height;
+        float: left;
+        margin: 0 auto;
+        text-align: center;
+        color: $color-click;
+        padding: 0px;
+
+        i {
+            line-height: $tool-button-height;
+            display: inline-block;
+            vertical-align: middle;
+            margin: auto;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    &.\--horizontal {
+        width: $tool-button-height;
+        float: left;
+        margin: auto;
+        text-align: center;
+        padding: 0px;
+        border-right: 1px solid $color-toolmenu-border-light;
+
+        i {
+            line-height: $tool-button-height;
+            display: block;
+            vertical-align: middle;
+            margin: auto;
+        }
+
+        p {
+            display: none;
+        }
+
+    }
+}
+
+.toolmenu-spacer {
+    display: block;
+    margin: 0 auto;
+    padding-right: 3px;
+    padding-left: 10px;
+    border-bottom: 1px solid $color-toolmenu-border-dark;
+    border-right: 1px solid $color-toolmenu-border-light;
+    cursor: default;
+
+    &.\--horizontal {
+        width: $tool-button-height;
+        padding: 0px;
+        border: 0px;
+        border-right: 1px solid $color-toolmenu-border-light;
+    }
+}
+
+.dark-hover {
+    &:hover {
+        color: $color-click;
+        background-color: $color-toolmenu-darkgrey-bg;
+    }
+}

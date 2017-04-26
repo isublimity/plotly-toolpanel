@@ -1,0 +1,224 @@
+// Vendor prefixer mixin.
+@mixin vendor($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
+
+/**
+ * Create CSS keyframe animations for all vendors in one go, e.g.:
+ *
+   .foo{
+       @include vendor(animation, shrink 3s);
+   }
+
+   @include keyframe(shrink){
+       from{
+           font-size:5em;
+       }
+   }
+ *
+ * @see http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+ */
+@mixin keyframe($animationName){
+
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+// Generates a column in the grid
+@mixin col-span($size: 1, $total-col: 12){
+    $col-width: $size / $total-col;
+    $gutter-width: 2.762430939%;
+    $width: percentage($col-width) - $gutter-width;
+
+    float: left;
+    box-sizing: border-box;
+    margin-left: $gutter-width;
+    height: 100%;
+    display: inline-block;
+
+    @if $size < $total-col {
+        width: $width;
+    } @else {
+        width: 100% - $gutter-width;
+    }
+}
+
+@mixin col-span-nogutter($size: 1, $total-col: 12){
+    $col-width: $size / $total-col;
+    $width: percentage($col-width);
+
+    float: left;
+    box-sizing: border-box;
+    margin-left: 0%;
+
+    @if $size < $total-col {
+        width: $width;
+    } @else {
+        width: 100%;
+    }
+}
+
+// Force Element To Self-Clear its Children
+// @source: http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Break points
+@mixin tiny-only { @media (max-width: $res-tiny-max) { @content; } }
+
+@mixin small-and-down { @media (max-width: $res-small-max) { @content; } }
+@mixin small-only { @media (min-width: $res-small-min) and (max-width: $res-small-max) { @content; } }
+@mixin small-and-up { @media (min-width: $res-small-min) { @content; } }
+
+@mixin medium-and-down { @media (max-width: $res-medium-max) { @content; } }
+@mixin medium-only { @media (min-width: $res-medium-min) and (max-width: $res-medium-max) { @content; } }
+@mixin medium-and-up { @media (min-width: $res-medium-min) { @content; } }
+
+@mixin large-and-down { @media (max-width: $res-large-max) { @content; } }
+@mixin large-only { @media (min-width: $res-large-min) and (max-width: $res-large-max) { @content; } }
+@mixin large-and-up { @media (min-width: $res-large-min) { @content; } }
+
+@mixin huge-only { @media (min-width: $res-huge-min) { @content; } }
+
+
+@mixin font-size($font-size, $line-height:true){
+    font-size:$font-size;
+    font-size:($font-size / $base-font-size) * 1rem;
+    @if $line-height == true {
+        line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+}
+
+@mixin z-index($value){
+    @if $value == "underground" {
+        z-index: -1;
+    } @else if $value == "floor" {
+        z-index: 1;
+    } @else if $value == "cloud" {
+        z-index: 9;
+    } @else if $value == "sky" {
+        z-index: 1001;
+    } @else if $value == 'orbit' {
+        z-index: 1003;
+    } @else {
+        @error "'#{$value}' is not a valid z-index value";
+    }
+}
+
+@mixin shadow($value) {
+    @if $value == "floor" {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    } @else if $value == "cloud" {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    } @else if $value == "sky" {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    } @else if $value == 'orbit' {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    } @else if $value == "moon" {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    } @else {
+        @error "'#{$value}' is not a valid shadow value";
+    }
+}
+
+//Transitions
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+
+//Transformations
+@mixin transform($transforms) {
+    @include vendor(transform, $transforms);
+}
+//rotate
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+         -o-transform-origin: $origin;
+        -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+
+// Whether the user can highlight the element
+@mixin user-select($select) {
+    -webkit-user-select: $select;
+    -khtml-user-select: $select;
+    -moz-user-select: $select;
+    -o-user-select: $select;
+    user-select: $select;
+}
+
+
+// Our reusable pale bg gradient
+@mixin pale-gradient-background {
+    background: $color-white;
+    background: linear-gradient(0deg, $color-bg-alt 0%, $color-white 100%); /* w3c */
+    background: -moz-linear-gradient(90deg, $color-bg-alt 0%, $color-white 100%); /* ff3.6+ */
+    background: -webkit-linear-gradient(90deg, $color-bg-alt 0%, $color-white 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(90deg, $color-bg-alt 0%, $color-white 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(90deg, $color-bg-alt 0%, $color-white 100%); /* ie10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F5F9FF', GradientType=0); /* ie6-9 */
+}
+
+@mixin flex-v-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
